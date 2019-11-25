@@ -133,7 +133,7 @@ $(document).ready(function() {
         widgets: ['zebra']
     });
 
-    var data = {"OkPercent": 100.0, "KoPercent": 0.0};
+    var data = {"OkPercent": 50.0, "KoPercent": 50.0};
     var dataset = [
         {
             "label" : "KO",
@@ -173,7 +173,7 @@ $(document).ready(function() {
     });
 
     // Creates APDEX table
-    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.875, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [1.0, 500, 1500, "api\/block\u65B0\u63A5\u53E3\u4E0D\u5E26\u53C2\u6570"], "isController": false}, {"data": [1.0, 500, 1500, "api\/block\u8001\u63A5\u53E3"], "isController": false}, {"data": [0.5, 500, 1500, "api\/block\u8001\u63A5\u53E3\u4E0D\u5E26\u53C2\u6570"], "isController": false}, {"data": [1.0, 500, 1500, "api\/block\u65B0\u63A5\u53E3"], "isController": false}]}, function(index, item){
+    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.3748625, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [0.0, 500, 1500, "api\/block\u65B0\u63A5\u53E3\u4E0D\u5E26\u53C2\u6570"], "isController": false}, {"data": [0.9995, 500, 1500, "api\/block\u8001\u63A5\u53E3"], "isController": false}, {"data": [0.49995, 500, 1500, "api\/block\u8001\u63A5\u53E3\u4E0D\u5E26\u53C2\u6570"], "isController": false}, {"data": [0.0, 500, 1500, "api\/block\u65B0\u63A5\u53E3"], "isController": false}]}, function(index, item){
         switch(index){
             case 0:
                 item = item.toFixed(3);
@@ -187,7 +187,7 @@ $(document).ready(function() {
     }, [[0, 0]], 3);
 
     // Create statistics table
-    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 2008, 0, 0.0, 175.27141434262924, 14, 1066, 569.0, 619.0999999999999, 826.6400000000003, 28.30201976067316, 65.79212874300553, 3.858845790638346], "isController": false}, "titles": ["Label", "#Samples", "KO", "Error %", "Average", "Min", "Max", "90th pct", "95th pct", "99th pct", "Transactions\/s", "Received", "Sent"], "items": [{"data": ["api\/block\u65B0\u63A5\u53E3\u4E0D\u5E26\u53C2\u6570", 502, 0, 0.0, 30.488047808764946, 15, 163, 48.0, 61.849999999999966, 132.93999999999994, 7.145093797147656, 29.020966695963452, 0.914069616627288], "isController": false}, {"data": ["api\/block\u8001\u63A5\u53E3", 502, 0, 0.0, 59.462151394422285, 48, 182, 71.0, 87.5499999999999, 109.87999999999988, 7.139504785743746, 4.175914749050674, 1.0335204282991766], "isController": false}, {"data": ["api\/block\u8001\u63A5\u53E3\u4E0D\u5E26\u53C2\u6570", 502, 0, 0.0, 590.9561752988046, 518, 1066, 701.7, 792.1999999999996, 959.3099999999993, 7.088993701810376, 29.380238746045983, 0.9207384397859182], "isController": false}, {"data": ["api\/block\u65B0\u63A5\u53E3", 502, 0, 0.0, 20.179282868525913, 14, 121, 30.69999999999999, 40.0, 78.63999999999965, 7.149673137453178, 3.628634921595716, 1.0210282016862975], "isController": false}]}, function(index, item){
+    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 40000, 20000, 50.0, 165.77877500000113, 0, 1577, 573.0, 631.0, 832.9900000000016, 30.033615123727234, 74.24736845698924, 2.0619008000485795], "isController": false}, "titles": ["Label", "#Samples", "KO", "Error %", "Average", "Min", "Max", "90th pct", "95th pct", "99th pct", "Transactions\/s", "Received", "Sent"], "items": [{"data": ["api\/block\u65B0\u63A5\u53E3\u4E0D\u5E26\u53C2\u6570", 10000, 10000, 100.0, 0.6575000000000014, 0, 10, 1.0, 1.0, 1.0, 7.512211099141655, 19.389427670929095, 0.0], "isController": false}, {"data": ["api\/block\u8001\u63A5\u53E3", 10000, 0, 0.0, 65.47449999999961, 48, 717, 83.0, 105.0, 204.98999999999978, 7.511833014956811, 4.393120213788646, 1.0871845112294392], "isController": false}, {"data": ["api\/block\u8001\u63A5\u53E3\u4E0D\u5E26\u53C2\u6570", 10000, 0, 0.0, 596.3504999999982, 517, 1577, 712.0, 803.0, 991.9799999999996, 7.508804072775329, 31.09871006372159, 0.9752645914835144], "isController": false}, {"data": ["api\/block\u65B0\u63A5\u53E3", 10000, 10000, 100.0, 0.6325999999999963, 0, 2, 1.0, 1.0, 1.0, 7.512132093330729, 19.389223752610466, 0.0], "isController": false}]}, function(index, item){
         switch(index){
             // Errors pct
             case 3:
@@ -215,7 +215,7 @@ $(document).ready(function() {
     }, [[0, 0]], 0, summaryTableHeader);
 
     // Create error table
-    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": []}, function(index, item){
+    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": [{"data": ["Non HTTP response code: org.apache.http.conn.HttpHostConnectException\/Non HTTP response message: Connect to 47.252.21.24:9000 [\\\/47.252.21.24] failed: Connection refused (Connection refused)", 20000, 100.0, 50.0], "isController": false}]}, function(index, item){
         switch(index){
             case 2:
             case 3:
@@ -226,7 +226,7 @@ $(document).ready(function() {
     }, [[1, 1]]);
 
         // Create top5 errors by sampler
-    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 2008, 0, null, null, null, null, null, null, null, null, null, null], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": [], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}]}, function(index, item){
+    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 40000, 20000, "Non HTTP response code: org.apache.http.conn.HttpHostConnectException\/Non HTTP response message: Connect to 47.252.21.24:9000 [\\\/47.252.21.24] failed: Connection refused (Connection refused)", 20000, null, null, null, null, null, null, null, null], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": ["api\/block\u65B0\u63A5\u53E3\u4E0D\u5E26\u53C2\u6570", 10000, 10000, "Non HTTP response code: org.apache.http.conn.HttpHostConnectException\/Non HTTP response message: Connect to 47.252.21.24:9000 [\\\/47.252.21.24] failed: Connection refused (Connection refused)", 10000, null, null, null, null, null, null, null, null], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}, {"data": ["api\/block\u65B0\u63A5\u53E3", 10000, 10000, "Non HTTP response code: org.apache.http.conn.HttpHostConnectException\/Non HTTP response message: Connect to 47.252.21.24:9000 [\\\/47.252.21.24] failed: Connection refused (Connection refused)", 10000, null, null, null, null, null, null, null, null], "isController": false}]}, function(index, item){
         return item;
     }, [[0, 0]], 0);
 
