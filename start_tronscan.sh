@@ -12,6 +12,7 @@ kill -9 $(cat pid)
 nohup java -jar /home/java-tron/tronscan_workspace/tronscan_spring/build/libs/http-1.0-SNAPSHOT.jar  >> /home/java-tron/tronscan_workspace/http.log 2>&1 &
 pid=$!
 echo $pid > pid
+rm -rf /home/java-tron/http_jmeter_report/Report
 /home/java-tron/apache-jmeter-5.2/bin/jmeter -n -t /home/java-tron/tronscan_workspace/tron-test/src/test/resources/http_jmeter.jmx -l result.jtl -e -o /home/java-tron/http_jmeter_report/Report
 cp -rf /home/java-tron/http_jmeter_report/Report/* /home/java-tron/http_jmeter_report/
 cd /home/java-tron/http_jmeter_report/
